@@ -1,0 +1,21 @@
+<h1>Create Question</h1>
+<%= simple_form_for(@question) do |f| %>
+  <p>
+    <%= f.input :question %>
+  </p>
+  <p>
+    <%= f.input :info %>
+  </p>
+  <p>
+    <%= f.input :link %>
+  </p>
+  <p>
+    <%= f.input :start_time %>
+  </p>
+  <p>
+    <%= f.input :end_time %>
+  </p>
+  <p>
+    <%= f.submit "Create", :class => 'btn btn-primary' %>
+  </p>
+<% end %>

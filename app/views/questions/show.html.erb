@@ -1,0 +1,10 @@
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+<h3><%= @question.question %></h3>
+<p><%= @question.info %></p>
+<p><%= link_to "Video Link", "#{@question.link}" %></p>
+<p><%= @question.start_time.strftime("%H:%M") %> to 
+	<%= @question.end_time.strftime("%H:%M") %></p>
+
+<p><%= link_to "All Questions", questions_path %> |
+<%= link_to "Edit", edit_question_path(@question) %></p>
+</div>

@@ -1,0 +1,12 @@
+<h1>Questions</h1>
+
+<% @questions.each do |question| %>
+<div class="booyah-box col-xs-10 col-xs-offset-1">
+	<h3><%= link_to question.question, question_path(question) %></h3><br />
+	<p><%= truncate question.info, length: 200 %></p><br />
+	<p><%= link_to "Video Link", "#{question.link}" %></p>
+	<p><%= question.start_time.strftime("%H:%M") %> to 
+	<%= question.end_time.strftime("%H:%M") %></p>
+	<%= link_to "Edit",edit_question_path(question) %>
+</div>
+<% end %>
